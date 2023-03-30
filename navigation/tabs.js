@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from "../screens/HomeScreen";
 import SettingsScreen from '../screens/SettingsScreen';
-import { StyleSheet } from "react-native";
+import { StyleSheet,View,Image, Text } from "react-native";
 
 
 const Tab = createBottomTabNavigator();
@@ -23,7 +23,21 @@ const Tabs = () => {
     }}
 
     >
-      <Tab.Screen  name="Home" component={HomeScreen} />
+      <Tab.Screen  name="Home" component={HomeScreen} options={{
+        tabBarIcon:({focused}) => (
+            <View>
+                <Image source={require("../assets/home.png")}
+                resizeMode="contain"
+                style={{
+                    width:25,
+                    height:25,
+                }}
+                >
+                </Image>
+                <Text>Home</Text>
+            </View>
+        ),
+      }} />
       <Tab.Screen name="Settings" component={SettingsScreen} />
     </Tab.Navigator>
   );
