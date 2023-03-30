@@ -25,16 +25,17 @@ const Tabs = () => {
     >
       <Tab.Screen  name="Home" component={HomeScreen} options={{
         tabBarIcon:({focused}) => (
-            <View>
+            <View style={{alignItems: "center", justifyContent:"center", top:10}}>
                 <Image source={require("../assets/home.png")}
                 resizeMode="contain"
                 style={{
                     width:25,
                     height:25,
+                    tintColor: focused ? "#e32f45" : "#748c94"
                 }}
                 >
                 </Image>
-                <Text>Home</Text>
+                <Text style = {{fontSize:12}}>Home</Text>
             </View>
         ),
       }} />
