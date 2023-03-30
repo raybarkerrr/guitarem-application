@@ -39,7 +39,22 @@ const Tabs = () => {
             </View>
         ),
       }} />
-      <Tab.Screen name="Settings" component={SettingsScreen} />
+      <Tab.Screen name="Settings" component={SettingsScreen} options={{
+        tabBarIcon:({focused}) => (
+            <View style={{alignItems: "center", justifyContent:"center", top:10}}>
+                <Image source={require("../assets/gear.png")}
+                resizeMode="contain"
+                style={{
+                    width:25,
+                    height:25,
+                    tintColor: focused ? "#e32f45" : "#748c94"
+                }}
+                >
+                </Image>
+                <Text style = {{fontSize:12}}>Settings</Text>
+            </View>
+        ),
+      }}/>
     </Tab.Navigator>
   );
 
