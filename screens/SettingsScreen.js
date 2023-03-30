@@ -4,7 +4,7 @@ import {View, Text, Button, Stylesheet} from "react-native"
 const SettingsScreen = ({navigation}) => {
     return(
         <View >
-        <Text>HomeScreen</Text>
+        <Text>monkey</Text>
         <Button title="Click Here" onPress={() => alert("button clicked")}></Button>
         </View>
     )

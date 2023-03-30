@@ -1,13 +1,21 @@
 import React from "react";
-import {View, Text, Button, Stylesheet} from "react-native"
+import {View, Text, Button,} from "react-native";
+import { StyleSheet } from "react-native";
+
 
 const HomeScreen = ({navigation}) => {
     return(
-        <View >
-        <Text>HomeScreen</Text>
-        <Button title="Click Here" onPress={() => alert("button clicked")}></Button>
+        <View>
+        <Text style ={styles.container}>Monkey woo</Text>
         </View>
     )
 }
 
+const styles = StyleSheet.create({
+    container: {
+        color:"blue",
+        padding: 50,
+        fontSize:40,
+    }
+})
 export default HomeScreen
